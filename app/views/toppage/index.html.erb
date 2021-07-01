@@ -36,7 +36,7 @@
       <%# ログインしているときは以下を表示する %>
       <% if user_signed_in? %>
         <div class="greeting">
-          <%= link_to "#{current_user.name}さん", user_path(current_user.id), class: :greeting__link %>
+          <%= link_to "#{current_user.name}さん", edit_user_path(current_user), class: :greeting__link %>
           <%= "のセッションルーム" %>
         </div>
       <% end %>
