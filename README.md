@@ -17,11 +17,15 @@ TRPGのようなコミュニケーション型RPGを体験できる。
 戦闘結果の計算をJavascriptのフロント実装によって行なった。
 
 ## 洗い出した要件
+### チャットをする機能
+### チャットルームを作成、削除する機能
+### ルームごとに使用するキャラクターを作成する機能
+### 戦闘が発生したときダメージ計算を行い、計算結果が出力される機能
 
 ## 実装した機能についての画像やGIFおよびその説明
 
 ## 実装予定の機能
-GM(ゲームマスター)をボットで行う機能、NPCの実装
+GM(ゲームマスター)をボットで行う機能、エピソードログの記録、NPCの実装
 
 ## ローカルでの動作方法
 
@@ -91,7 +95,7 @@ GM(ゲームマスター)をボットで行う機能、NPCの実装
 | hitpoint  | integer    |                               |
 | attack    | integer    |                               |
 | defence   | integer    |                               |
-| hitpoint  | integer    |                               |
+| escape    | integer    |                               |
 | room      | references | null: false,foreign_key: true |
 | user      | references | null: false,foreign_key: true |
 
