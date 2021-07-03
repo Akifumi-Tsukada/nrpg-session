@@ -1,8 +1,13 @@
 class CharasController < ApplicationController
-
+  before_action :set_chara, only: [:show, :edit, :update, :destroy]
   before_action :set_room
 
   def index
+  end
+
+  def show
+    @chara = Chara.new
+    @charas = @room.charas.includes(:user)
   end
 
   def new
@@ -19,12 +24,16 @@ class CharasController < ApplicationController
   end
 
   def destroy
-    chara = Chara.find(params[:id])
-    chara.destroy
+    @chara = Chara.find(params[:id])
+    @chara.destroy
     redirect_to :room
   end
 
   private
+
+  def set_chara
+    @chara = Chara.find(params[:id])
+  end
 
   def set_room
     @room = Room.find(params[:room_id])
