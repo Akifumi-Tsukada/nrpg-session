@@ -11,10 +11,8 @@ function fightSelect() {
   const currentListUser = document.getElementById("current-list-user")
   const user1Hp = document.getElementById("user1-hp")
   const user2Hp = document.getElementById("user2-hp")
+  const infoMessage = document.getElementById("chat-messages")
 
-  fightAction.addEventListener('mouseover', function(){
-    this.setAttribute("style", "background-color:#FFBEDA;")
-  })
 
   fightAction.addEventListener('mouseout', function(){
     this.removeAttribute("style", "background-color:#FFBEDA;")
@@ -25,7 +23,7 @@ function fightSelect() {
     /* User1の戦闘処理 */
     if (currentList.innerHTML == fightAttack.innerHTML && currentListUser.innerHTML == SelectUser1.innerHTML) {
       user1Hp.value = Math.floor(parseInt(user1Hp.value) - 10);
-      infoMessage.innerHTML = currentListUser.innerHTML + "は攻撃を受けた"
+      infoMessage.insertAdjacentHTML('afterbegin', currentListUser.innerHTML + "は攻撃を受けた");
     }
     else if (currentList.innerHTML == fightDefence.innerHTML  && currentListUser.innerHTML == SelectUser1.innerHTML) {
       user1Hp.value = Math.floor(parseInt(user1Hp.value) + 5);

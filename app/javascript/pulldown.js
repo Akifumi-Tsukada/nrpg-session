@@ -33,8 +33,6 @@ function pullDown() {
 
 }
 
-window.addEventListener('load', pullDown)
-
 function currentPullDownUser() {
 
   const pullDownButton = document.getElementById("lists-current-user")
@@ -73,9 +71,6 @@ function currentPullDownUser() {
   })
 }
 
-window.addEventListener('load', currentPullDownUser)
-
-
 function pullDownUser() {
 
   const pullDownButton = document.getElementById("lists-user")
@@ -110,4 +105,6 @@ function pullDownUser() {
   })
 }
 
+window.addEventListener('load', pullDown)
+window.addEventListener('load', currentPullDownUser)
 window.addEventListener('load', pullDownUser)
