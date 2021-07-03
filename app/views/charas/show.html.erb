@@ -1,0 +1,48 @@
+  <% @charas.each do |chara| %>
+    <li class="">
+      <%= "#{chara.user.name}さん 使用PC"%>
+      <%= "#{chara.name}"%>
+      <%= "#{chara.job}"%>
+      <%= "#{chara.magic}"%>
+      <%= "#{chara.hitpoint}"%>
+      <%= "#{chara.attack}"%>
+      <%= "#{chara.defence}"%>
+      <%= "#{chara.escape}"%>
+      <%= link_to "編集", edit_room_chara_path(chara), method: :get, class: "item-red-btn" %>
+      <p>or</p>
+      <%= link_to "削除", room_chara_path(chara), method: :delete, class:"item-destroy" %>
+    </li>
+  <% end %>
+
+  <table class="">
+    <tbody>
+      <tr>
+        <th class="">キャラクター名</th>
+        <%#<td class="detail-value"><%=  %></td>
+      </tr>
+      <tr>
+        <th class="">職業</th>
+        <%#<td class="detail-value"><%=  %></td>
+      </tr>
+      <tr>
+        <th class="">魔法属性</th>
+        <%#<td class="detail-value"><%=  %></td>
+      </tr>
+      <tr>
+        <th class="">HP</th>
+        <%#<td class="detail-value"><%=  %></td>
+      </tr>
+      <tr>
+        <th class="">攻撃力</th>
+        <%#<td class="detail-value"><%=  %></td>
+      </tr>
+      <tr>
+        <th class="">防御力</th>
+        <%#<td class="detail-value"><%=  %></td>
+      </tr>
+      <tr>
+        <th class="">回避力</th>
+        <%#<td class="detail-value"><%=  %></td>
+      </tr>
+    </tbody>
+  </table>
