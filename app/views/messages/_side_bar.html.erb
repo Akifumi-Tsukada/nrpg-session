@@ -5,9 +5,9 @@
   <div class="header-name">
       <%= link_to "トップページにもどる", root_path(current_user) %><br>
       <br>
-      <%= link_to "キャラクター作成", "/rooms/#{@room.id}/charas/new"%><br>
+      <%= link_to "キャラクター作成", "/rooms/#{@room.id}/charas/new", target: :_blank %><br>
       <br>
-      <%= link_to "キャラクター一覧", "/rooms/#{@room.id}/charas/#{current_user.id}" %>
+      <%= link_to "キャラクター一覧", "/rooms/#{@room.id}/charas/#{current_user.id}", target: :_blank %>
       <%#<%= @chara.current_user.name %>
   </div>
 </div>

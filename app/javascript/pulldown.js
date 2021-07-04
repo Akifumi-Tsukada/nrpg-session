@@ -6,11 +6,11 @@ function pullDown() {
   const currentList = document.getElementById("current-list")
 
   pullDownButton.addEventListener('mouseover', function(){
-    this.setAttribute("style", "background-color:#FFBEDA;")
+    this.setAttribute("style", "background-color:#ffb6c1")
   })
 
   pullDownButton.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "background-color:#FFBEDA;")
+    this.removeAttribute("style", "background-color:#ffb6c1")
   })
 
   pullDownButton.addEventListener('click', function() {
@@ -43,11 +43,11 @@ function currentPullDownUser() {
   const yourUserChat = document.getElementById("your-user-chat")
 
   pullDownButton.addEventListener('mouseover', function(){
-    this.setAttribute("style", "background-color:#FFBEDA;")
+    this.setAttribute("style", "background-color:#ffb6c1")
   })
 
   pullDownButton.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "background-color:#FFBEDA;")
+    this.removeAttribute("style", "background-color:#ffb6c1")
   })
 
   pullDownButton.addEventListener('click', function() {
@@ -79,11 +79,11 @@ function pullDownUser() {
   const currentList = document.getElementById("current-list-user")
 
   pullDownButton.addEventListener('mouseover', function(){
-    this.setAttribute("style", "background-color:#FFBEDA;")
+    this.setAttribute("style", "background-color:#ffb6c1")
   })
 
   pullDownButton.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "background-color:#FFBEDA;")
+    this.removeAttribute("style", "background-color:#ffb6c1")
   })
 
   pullDownButton.addEventListener('click', function() {

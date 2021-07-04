@@ -13,9 +13,12 @@ function fightSelect() {
   const user2Hp = document.getElementById("user2-hp")
   const infoMessage = document.getElementById("chat-messages")
 
+  fightAction.addEventListener('mouseover', function(){
+    this.setAttribute("style", "background-color:#ffb6c1")
+  })
 
   fightAction.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "background-color:#FFBEDA;")
+    this.removeAttribute("style", "background-color:#ffb6c1")
   })
 
   fightAction.addEventListener('click', function() {
@@ -76,10 +79,6 @@ function fightSelect() {
       user2Hp.value = 0;
     }
 
-  })
-
-  infoMessage.addEventListener('click', function() {
-    infoMessage.innerHTML = ""
   })
 
 }
