@@ -115,57 +115,20 @@
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
-  .inner {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .page-heading {
-    font-size: 24px;
-  }
-  .card {
-    width: 48%;
-    margin-bottom: 40px;
-  }
-  .room_image{
-    width: 60%;
-  }
-
-  .nrpg-explain {
-    font-size: 14px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
 }
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  .logo {
-    width: 120px;
-  }
-  .page-heading {
-    font-size: 20px;
-  }
-  .card {
-    width: 100%;
-    margin-bottom: 60px;
-  }
-  .card__title {
-    font-size: 18px;
-  }
-  .card__summary {
-    font-size: 14px;
-  }
-  .room_image{
-    width: 100%;
-  }
-  .table{
-    width: 100%;
+  .account-page .account-page__inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100vw;
   }
 
-  .nrpg-explain {
-    font-size: 14px;
+  .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
+    float: center;
     width: 100%;
-    margin: 0 auto;
-  }
+    }
+
 }

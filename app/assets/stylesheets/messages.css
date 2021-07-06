@@ -148,3 +148,23 @@
 .hidden {
   display: none;
 }
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .chat {
+    width: 100vw;
+    margin-bottom: 100px;
+  }
+
+}
