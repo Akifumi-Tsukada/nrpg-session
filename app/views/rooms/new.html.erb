@@ -10,8 +10,6 @@
       </div>
     </div>
     <div class='chat-room-form__field'>
-    </div>
-    <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
       </div>
@@ -22,8 +20,26 @@
             <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
         </select>
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
+      <div class='chat-room-form__field--right'>
+        <select name="room[user_ids][]">
+          <option value="">チャットするユーザーを選択してください</option>
+          <% User.where.not(id: current_user.id).each do |user| %>
+            <option value=<%= user.id %>><%= user.name %></option>
+          <% end %>
+        </select>
+        <input name="room[user_ids][]" type="hidden">
+      </div>
+      <div class='chat-room-form__field--right'>
+        <select name="room[user_ids][]">
+            <option value="">チャットするユーザーを選択してください</option>
+            <% User.where.not(id: current_user.id).each do |user| %>
+              <option value=<%= user.id %>><%= user.name %></option>
+            <% end %>
+        </select>
+        <input name="room[user_ids][]" type="hidden">
+      </div>
+      <input name="room[user_ids][]" value=<%= current_user.id %> type="hidden">
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'></div>
@@ -33,3 +49,14 @@
     </div>
   <% end %>
 </div>
+  <%#= form_with model: User.new, method: :get, class: "search__form" do |f| %>
+      <%#= f.text_field :name, required: true, class: "search__form__input" %>
+      <%#= f.submit "検索" %>
+  <%# end %>
+  <%#= form_with(url: search_users_path, local: true, method: :get) do |form| %>
+  <%#= form.text_field :name, placeholder: "投稿を検索する"%>
+  <%#= form.submit "検索" %>
+<%# end %>
+  <%# @users.each do |user| %>
+    <%#= user.name %>
+  <%# end %>
