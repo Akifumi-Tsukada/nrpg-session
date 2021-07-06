@@ -7,8 +7,8 @@
       <br>
       <%= link_to "キャラクター作成", "/rooms/#{@room.id}/charas/new", target: :_blank %><br>
       <br>
-      <%= link_to "キャラクター一覧", "/rooms/#{@room.id}/charas/#{current_user.id}", target: :_blank %>
-      <%#<%= @chara.current_user.name %>
+      <%= link_to "ステータス一覧・ダメージ計算", "/rooms/#{@room.id}/charas/#{current_user.id}", target: :_blank %>
+      <span class="attention">※必ずキャラクター作成を行なってください</span>
   </div>
 </div>
 <div class="rooms">

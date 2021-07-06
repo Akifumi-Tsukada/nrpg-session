@@ -7,7 +7,7 @@ class CharasController < ApplicationController
 
   def show
     @chara = Chara.new
-    @charas = @room.charas.includes(:user)
+    @charas = @room.charas
   end
 
   def new

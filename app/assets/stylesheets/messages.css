@@ -9,10 +9,11 @@
 }
 
 .side-bar-header {
-  height: 150px;
+  height: 250px;
   padding: 0 20px;
   background-color: #253141;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -25,7 +26,7 @@
 
 .rooms {
   background-color: #2F3E51;
-  height: 100vh;
+  height: calc(100vh - 250px);
   padding: 0 20px;
   overflow: scroll;
 }

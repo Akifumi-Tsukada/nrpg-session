@@ -27,6 +27,32 @@
   text-align: right;
 }
 
+.fight-log {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fight-log-message {
+  width: 100%;
+  margin: 40px;
+}
+
+.attention {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #d8bfd8;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #808080 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
 ul,li {
   padding: 0;
   margin: 0;
